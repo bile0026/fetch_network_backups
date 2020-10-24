@@ -9,3 +9,4 @@
     recursive: True
     private_key: ~/.ssh/ansible_rsa
     set_remote_user: True
+  delegate_to: "{{ ansible_host }}"
