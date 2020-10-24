@@ -12,3 +12,4 @@
     times: True
   delegate_to: "{{ item }}"
   with_items: "{{ remote_worker_hostnames }}"
+  run_once: True

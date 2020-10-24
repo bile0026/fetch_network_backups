@@ -1,6 +1,6 @@
 ---
 - name: Fetch Network Device Backups from Remote Ansible Nodes
-  hosts: localhost
+  hosts: "{{ awx_host }}"
   gather_facts: True
   roles:
     - fetch_network_backups
