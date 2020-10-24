@@ -1,0 +1,9 @@
+---
+# tasks file for fetch_network_backups
+
+- name: Sync Pull from Remote Workers
+  ansible.posix.synchronize:
+    mode: pull
+    src: rsync://{{ inventory_host }}/{{ remote_config_directory }}
+    dest: "{{ local_config_directory }}"
+    recursive: True

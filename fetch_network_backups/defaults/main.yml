@@ -1,0 +1,11 @@
+---
+# defaults file for fetch_network_backups
+
+platforms:
+  - mikrotik
+  - cisco
+  - palo_alto
+current_date: "{{ lookup('pipe','date +%Y-%m-%d') }}"
+yesterday_date: "{{ lookup('pipe','date +%Y-%m-%d --date=yesterday' ) }}"
+remote_config_directory: /ansible_backups
+local_config_directory: /awx_backups
