@@ -10,3 +10,4 @@
     private_key: /home/{{ rsync_username }}/.ssh/ansible_rsa
     set_remote_user: True
     times: True
+  delegate_to: "{{ inventory_hostname }}"
