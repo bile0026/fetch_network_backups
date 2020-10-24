@@ -7,7 +7,7 @@ platforms:
   - palo_alto
 current_date: "{{ lookup('pipe','date +%Y-%m-%d') }}"
 yesterday_date: "{{ lookup('pipe','date +%Y-%m-%d --date=yesterday' ) }}"
-remote_config_directory: /awx_backups
-local_config_directory: /ansible_backups
+remote_config_directory: /ansible_backups
+local_config_directory: /awx_backups
 awx_host: 192.168.252.9
 rsync_username: awx
