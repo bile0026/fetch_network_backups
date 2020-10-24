@@ -2,7 +2,6 @@
 # tasks file for fetch_network_backups
 
 - name: Sync Pull from Remote Workers
-  hosts: "{{ awx_host }}"
   ansible.posix.synchronize:
     #mode: push
     src: "{{ remote_config_directory }}"
