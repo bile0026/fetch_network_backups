@@ -3,7 +3,7 @@
 
 - name: Sync Pull from Remote Workers
   ansible.posix.synchronize:
-    mode: push
+    # mode: push
     src: "{{ remote_config_directory }}"
     dest: rsync://{{ rsync_username }}@{{ awx_host }}/{{ local_config_directory }}
     recursive: True
