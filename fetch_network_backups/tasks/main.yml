@@ -5,8 +5,8 @@
   ansible.posix.synchronize:
     #mode: push
     src: "{{ remote_config_directory }}"
-    dest: "rsync://{{ rsync_username }}@{{ awx_host }}:{{ local_config_directory }}"
+    dest: "rsync://{{ rsync_username }}@{{ awx_host }}/{{ local_config_directory }}"
     recursive: True
-    private_key: /home/{{ rsync_username }}/.ssh/ansible_rsa
+    private_key: ~/.ssh/ansible_rsa
     times: True
   delegate_to: "{{ inventory_hostname }}"
