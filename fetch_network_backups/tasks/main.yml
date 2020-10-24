@@ -11,5 +11,4 @@
     #private_key: ~/.ssh/ansible_rsa
     times: True
   delegate_to: "{{ item }}"
-  with_items:
-    - remote_worker_hostnames
+  with_items: "{{ remote_worker_hostnames }}"
