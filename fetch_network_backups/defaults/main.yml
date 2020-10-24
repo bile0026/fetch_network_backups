@@ -11,3 +11,5 @@ remote_config_directory: /ansible_backups/
 local_config_directory: /awx_backups
 awx_host: 192.168.252.9
 rsync_username: awx
+remote_worker_hostnames:
+  - 192.168.252.10

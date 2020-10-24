@@ -10,4 +10,6 @@
     recursive: True
     #private_key: ~/.ssh/ansible_rsa
     times: True
-  delegate_to: "{{ inventory_hostname }}"
+  delegate_to: "{{ item }}"
+  with_items:
+    - remote_worker_hostnames
