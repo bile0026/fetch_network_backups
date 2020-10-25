@@ -3,14 +3,10 @@
 
 - name: Sync Pull from Remote Workers
   ansible.posix.synchronize:
-    #mode: push
     src: "{{ remote_config_directory }}"
-    #dest: "rsync://{{ rsync_username }}@{{ awx_host }}:{{ local_config_directory }}"
     dest: "{{ local_config_directory }}"
     recursive: True
-    #private_key: ~/.ssh/ansible_rsa
     times: True
-    perms: True
   delegate_to: "{{ item }}"
   with_items: "{{ remote_worker_hostnames }}"
   run_once: True
