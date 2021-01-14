@@ -1,6 +1,6 @@
 ---
 - name: Fetch Network Device Backups from Remote Ansible Nodes
   hosts: all
-  gather_facts: True
+  gather_facts: true
   roles:
     - fetch_network_backups

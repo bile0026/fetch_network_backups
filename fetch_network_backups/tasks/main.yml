@@ -5,7 +5,7 @@
   ansible.posix.synchronize:
     src: "{{ remote_config_directory }}"
     dest: "{{ local_config_directory }}"
-    recursive: True
-    times: True
+    recursive: true
+    times: true
   delegate_to: "{{ inventory_hostname }}"
-  run_once: True
+  run_once: true
