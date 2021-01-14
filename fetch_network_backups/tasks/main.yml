@@ -7,6 +7,5 @@
     dest: "{{ local_config_directory }}"
     recursive: True
     times: True
-  delegate_to: "{{ item }}"
-  with_items: "{{ remote_worker_hostnames }}"
+  delegate_to: "{{ inventory_hostname }}"
   run_once: True
