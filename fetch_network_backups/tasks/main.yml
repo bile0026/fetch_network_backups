@@ -7,5 +7,6 @@
     dest: "{{ local_config_directory }}"
     recursive: true
     times: true
-  delegate_to: "{{ inventory_hostname }}"
+    mode: pull
+  delegate_to: "{{ awx_host }}"
   run_once: true
