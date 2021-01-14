@@ -9,4 +9,3 @@
     times: true
     mode: pull
   delegate_to: "{{ awx_host }}"
-  run_once: true
