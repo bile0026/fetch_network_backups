@@ -6,6 +6,6 @@
     src: "{{ remote_config_directory }}"
     dest: "{{ local_config_directory }}"
     recursive: true
-    times: true
+    archive: true
     mode: pull
   delegate_to: "{{ awx_host }}"
